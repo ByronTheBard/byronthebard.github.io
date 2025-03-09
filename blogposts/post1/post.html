@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>post</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+
+</head>
+
+<body>
+
+<h1 id="toc_0">D&amp;D and text-to-image generation</h1>
+
+<p>Machine learning models for generating images from text prompts have significantly improved over the last few years. These models process a large data of images with captions, and encode knowledge about the world and language statistically. Once trained, these models may be presented with a text prompt and they will create an original image on demand. Here we have some fun by trying to elict how much knowledge of the world of roleplaying games, and specifically <em>Dungeons and Dragons</em>, one of these models can capture.</p>
+
+<h2 id="toc_1">The model</h2>
+
+<p>We play with <a href="https://github.com/borisdayma/dalle-mini">DALL-E Mini</a>, an open-source implementation of a text-to-image model. All the examples have been generated using the <a href="https://huggingface.co/">Hugging Face</a> Space for <a href="https://huggingface.co/spaces/dalle-mini/dalle-mini">DALL-E Mini</a>. Details about the model, the training dataset and the training process are available <a href="https://wandb.ai/dalle-mini/dalle-mini/reports/DALL-E-Mini-Explained-with-Demo--Vmlldzo4NjIxODA">online</a>. All the images were generated on the 29th May 2022; the examples below are normally cherry-picked out of nine possible images returned by the model.</p>
+
+<h2 id="toc_2">Interacting with the model</h2>
+
+<p>We start with simple queries aimed at establishing whether the model has any knowledge of classical D&amp;D categories. </p>
+
+<h3 id="toc_3">Beholders and kobolds</h3>
+
+<p>An easy starting point are D&amp;D monsters: they have highly distinctive names and, at least for some of them, a quite well-established appearance [1]. We query: <em>a band of kobolds fight against a beholder</em>.</p>
+
+<p><img src="a-band-of-kobolds-fight-against-a-beholder.png" alt="a-band-of-kobolds-fight-against-a-beholder"><img src="a-band-of-kobolds-fight-against-a-beholder2.png" alt="a-band-of-kobolds-fight-against-a-beholder2"></p>
+
+<p>The model seems to have an understanding of what a beholder might be (a large floating ball with sharp teeth and pseudopods); kobolds, when drawn, are in an approximately right scale, but very sketchy.</p>
+
+<h3 id="toc_4">Edition wars</h3>
+
+<p>Although certain monsters, like beholders, preserve their traits across editions, we know that their style evolved through years ([1] pgs 40-41). We examine if the model has any awareness of this. First we ask for a current-day creature: <em>a picture of a fifth edition beholder</em></p>
+
+<p><img src="a%20picture%20of%20a%20fifth%20edition%20beholder.png" alt="a picture of a fifth edition beholder"><img src="a%20picture%20of%20a%20fifth%20edition%20beholder2.png" alt="a picture of a fifth edition beholder2"></p>
+
+<p>And then we ask for an older ancestor: <em>a picture of a first edition beholder</em></p>
+
+<p><img src="a%20picture%20of%20a%20first%20edition%20beholder.png" alt="a picture of a first edition beholder"><img src="a%20picture%20of%20a%20first%20edition%20beholder2.png" alt="a picture of a fifth edition beholder2"></p>
+
+<p>At first sight, it is hard to notice a difference that may lead to attribute these images to one edition instead of another; all images seem reasonably <em>modern</em>.</p>
+
+<h3 id="toc_5">Back in time</h3>
+
+<p>The failure to generate images that clearly belong to one era instead of another may be due to the fact that the captions used to train the model rarely report information about <em>editions</em>. We wonder if, instead, the year in which an image was produced is more likely to be in the training caption. We test this idea querying for: <em>a picture of a d&amp;d beholder (1980)</em></p>
+
+<p><img src="a%20picture%20of%20a%20d&amp;d%20beholder%20(1980).png" alt="a picture of a d&amp;d beholder (1980)"><img src="a%20picture%20of%20a%20d&amp;d%20beholder%20(1980)2.png" alt="a picture of a d&amp;d beholder (1980)2"></p>
+
+<p>The model now introduces a more archaic feel with an almost black-and-white rendition.</p>
+
+<h3 id="toc_6">Artist style</h3>
+
+<p>Another sort of information conveyed by captions is often the name of the illustrator. This could allow us to request an image in a style that is distinctive of a certain artist [1]. We first tried with <em>a picture of a beholder by Larry Elmore</em>: </p>
+
+<p><img src="a%20picture%20of%20a%20beholder%20by%20Larry%20Elmore.png" alt="a picture of a beholder by Larry Elmore"><img src="a%20picture%20of%20a%20beholder%20by%20Larry%20Elmore2.png" alt="a picture of a beholder by Larry Elmore2"></p>
+
+<p>The specific style seems to be captured mainly in the addition of a new rich background, which may be vaguely reminiscent of a <em>Dragonlance</em> setting.</p>
+
+<p>We then tried with another artist with his own distinctive style: <em>a picture of a beholder by Tony DiTerlizzi</em></p>
+
+<p><img src="a%20picture%20of%20a%20beholder%20by%20Tony%20DiTerlizzi.png" alt="a picture of a beholder by Tony DiTerlizzi"><img src="a%20picture%20of%20a%20beholder%20by%20Tony%20DiTerlizzi2.png" alt="a picture of a beholder by Tony DiTerlizzi2"></p>
+
+<p>The style is markedly different now, with clear dark traits and limited use of color. Once again, though, it is probably the desolate planar landscape that may recall the <em>Planescape</em> setting.</p>
+
+<p>Finally, we query <em>a picture of a beholder by Erol Otus</em>:</p>
+
+<p><img src="a%20picture%20of%20a%20beholder%20by%20Erol%20Otus.png" alt="a picture of a beholder by Erol Otus"><img src="a%20picture%20of%20a%20beholder%20by%20Erol%20Otus2.png" alt="a picture of a beholder by Erol Otus2"></p>
+
+<p>However, the model seems to rollback to a basic style, hardly capturing the surrealist style [1] of the artist.</p>
+
+<p>Of course, we do not have to ask for a fantasy author: <em>a picture of a beholder by Picasso</em>:</p>
+
+<p><img src="a%20picture%20of%20a%20beholder%20by%20Picasso.png" alt="a picture of a beholder by Picasso"><img src="a%20picture%20of%20a%20beholder%20by%20Picasso2.png" alt="a picture of a beholder by Picasso2"></p>
+
+<p>These images clearly capture the feeling of the Spanish artist, not only because of his distinctive style, but also, very likely, because the dataset contains a larger samples of works by Picasso.</p>
+
+<h3 id="toc_7">Other formats</h3>
+
+<p>Always remaining on the topic of monsters, we test the model by requesting other types of representations. We start with portraits: <em>portrait of a lich</em> </p>
+
+<p><img src="portrait-of-a-lich2.png" alt="portrait-of-a-lich2"><img src="portrait-of-a-lich3.png" alt="portrait-of-a-lich3"></p>
+
+<p>We get both a close-up and a full-body portrait that clearly convey the undead nature of the subject.</p>
+
+<p>Another format is a 3D miniature: <em>miniature of Demogorgon</em></p>
+
+<p><img src="Miniature%20of%20Demogorgon.png" alt="Miniature of Demogorgon"><img src="Miniature%20of%20Demogorgon2.png" alt="Miniature of Demogorgon2"></p>
+
+<p>The image does a good job at portraying a miniature. It depicts the long arms of the D&amp;D demon prince, but the picture owes its head, at least in one case, to <em>Stranger Things</em> lore.</p>
+
+<h3 id="toc_8">D&amp;D lexicon</h3>
+
+<p>So far the model has fared pretty well: it has been able to generate relevant images when provided with prompts that contained specific D&amp;D keywords without external knowledge being provided; it showed that it connected the string <em>beholder</em> to a flying aberration, or the string <em>lich</em> to an undead. However this success is probably to be ascribed to the distinctive lexicon of D&amp;D forming its own niche. When trespassing this domain, D&amp;D content and references may be lost, as in the case of Demogorgon, where the model returned the image of a creature belonging to a different imaginary universe. Even if we try to make our request more explicit, results are similar: <em>miniature of D&amp;D Demogorgon</em></p>
+
+<p><img src="Miniature%20of%20D&amp;D%20Demogorgon.png" alt="Miniature of D&amp;D Demogorgon"></p>
+
+<p>After all, the string <em>D&amp;D</em> belongs once again to the lore of <em>Stranger Things</em>, and the model is not able to disentangle the two representations. The bias of the model towards <em>Stranger Things</em>&#39;s Demogorgon is probably due to a larger number of samples in the dataset. With negation not understood by the model, it is hard to provide the model with enough direction to rectify this.</p>
+
+<h3 id="toc_9">Travelling in other lands</h3>
+
+<p>Success with creatures, does not transfer straightforwardly to other queries. If we ask about famous locations, we get at best vague renditions. For instance, we could ask <em>a view of castle Ravenloft</em>:</p>
+
+<p><img src="a%20view%20of%20castle%20Ravenloft.png" alt="a view of castle Ravenloft"></p>
+
+<p>Probably the keyword <em>Ravenloft</em> is responsible for the gloomy atmosphere, but the castle is pretty generic.</p>
+
+<p>Similarly, if we request <em>a photorealistic view of the city of Sigil</em>:</p>
+
+<p><img src="a%20photorealistic%20view%20of%20the%20city%20of%20Sigil.png" alt="a photorealistic view of the city of Sigil"></p>
+
+<p>We get an endless sprawl which could recall the city of Sigil, but real fans may be skeptic about it (especially the blue sky!)</p>
+
+<h3 id="toc_10">Back to the real world</h3>
+
+<p>We can also probe the model about its knowledge of D&amp;D in the real world. This could also end up returning and highlighting biases present in the original training data set. If we ask for <em>a group of friends playing D&amp;D</em>, we get:</p>
+
+<p><img src="a%20group%20of%20friends%20playing%20D&amp;D.png" alt="a group of friends playing D&amp;D"><img src="a%20group%20of%20friends%20playing%20D&amp;D2.png" alt="a group of friends playing D&amp;D2"></p>
+
+<p>This probably shows an understanding of D&amp;D as a generic boardgame, as the emphasis on board, maps and components suggest.</p>
+
+<h3 id="toc_11">Predicting the future</h3>
+
+<p>Finally, we take a look into the crystal ball. The model has no ability to predict the future, but we still seek an oracular response: <em>cover of the next D&amp;D handbook</em></p>
+
+<p><img src="cover%20of%20the%20next%20D&amp;D%20handbook.png" alt="cover of the next D&amp;D handbook"><img src="cover%20of%20the%20next%20D&amp;D%20handbook2.png" alt="cover of the next D&amp;D handbook2"></p>
+
+<p>Interpretation left to the reader!</p>
+
+<h3 id="toc_12">Timeout fails</h3>
+
+<p>It is worth reporting that some input prompts did not lead to an output in a reasonable time (arbitrarily set to 600 seconds). We experienced this in the following cases:</p>
+
+<ul>
+<li>Very specific request, e.g.: <em>miniature of demon prince D&amp;D Demogorgon</em></li>
+<li>Query based on proper nouns, e.g.: <em>a view of Baldur&#39;s Gate</em>, <em>Elminster crossing the Spine of the World</em></li>
+<li>Conditional statements, e.g.: <em>if I were a kobold, I would...</em></li>
+</ul>
+
+<h3 id="toc_13">Epic fails</h3>
+
+<p>Equally interesting, and perhaps more funny, are the failure cases of the model. </p>
+
+<p>For instance, the result of <em>Mialee casting a magic missile</em> was:</p>
+
+<p><img src="Mialee%20casting%20a%20magic%20missile.png" alt="Mialee casting a magic missile"></p>
+
+<p><em>Mialee</em> is probably too rare a name to convey any bias towards D&amp;D, and <em>magic missile</em> is not a specific enough keyword.</p>
+
+<p>The result improved a little bit making explict the connection with magic and requesting <em>a wizard casting a magic missile</em>:</p>
+
+<p><img src="A%20wizard%20casting%20a%20magic%20missile.png" alt="A wizard casting a magic missile"><img src="A%20wizard%20casting%20a%20magic%20missile2.png" alt="A wizard casting a magic missile2"></p>
+
+<p>However, the wizard remains very non-descriptive, and a missile or its effect are forced into the image.</p>
+
+<p>Even when requesting a beholder, the model may fall back on the standard meaning of beholder, if the context of D&amp;D is not made explicit; if, instead of requesting, <em>a picture of a d&amp;d beholder (1980)</em>, we ask for <em>a picture of a beholder (1980)</em>, we would end up with:</p>
+
+<p><img src="A%20picture%20of%20a%20beholder%20(1980).png" alt="A picture of a beholder (1980)"></p>
+
+<p>A frame from a 1980s-like movie!</p>
+
+<p>Actually all the above are not technically failures of the model, but just the discrepancy between our expected interpretation of the prompt and the average or common-sense meaning of the prompt. After all, without context, the model has no way to infer that our queries should be given meaning within the world of D&amp;D. </p>
+
+<h2 id="toc_14">Bibliography</h2>
+
+<p>[1] Witwer, Michael, et al. Dungeons &amp; Dragons Art &amp; Arcana: A Visual History. Ten Speed Press, 2018.</p>
+
+
+
+
+</body>
+
+</html>
